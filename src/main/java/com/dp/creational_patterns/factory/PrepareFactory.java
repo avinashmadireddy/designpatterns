@@ -4,7 +4,7 @@ public class PrepareFactory {
 	public static String MONGO = "MONGO";
 	public static String SQL = "SQL";
 
-	public static DBConnection getConnection(String dbType) {
+	public DBConnection getConnection(String dbType) {
 		if (MONGO.equals(dbType))
 			return new MongoDB();
 

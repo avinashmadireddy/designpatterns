@@ -2,19 +2,20 @@ package com.dp.creational_patterns.factory;
 
 public class FactoryPattern {
 	public static void main(String[] args) {
-		connectMongo();
+		PrepareFactory factory = new PrepareFactory();
+		
+		connectMongo(factory);
 
-		connectSQL();
+		connectSQL(factory);
 	}
 
-	private static void connectSQL() {
-		DBConnection sql = PrepareFactory.getConnection(PrepareFactory.SQL);
+	private static void connectSQL(PrepareFactory factory) {
+		DBConnection sql = factory.getConnection(PrepareFactory.SQL);
 		sql.connect();
 	}
 
-	private static void connectMongo() {
-		DBConnection mongo = PrepareFactory.getConnection(PrepareFactory.MONGO);
-
+	private static void connectMongo(PrepareFactory factory) {
+		DBConnection mongo = factory.getConnection(PrepareFactory.MONGO);
 		mongo.connect();
 	}
 }
