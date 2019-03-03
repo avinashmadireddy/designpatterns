@@ -7,8 +7,9 @@ public class ConstructCache {
 
 	private static Map<String, Shape> cache = new HashMap<String, Shape>();
 
-	public static Shape getShare(String id) {
-		return cache.get(id);
+	public static Shape getShare(String id) throws CloneNotSupportedException {
+		Shape shape = cache.get(id);
+		return (Shape) shape.clone();
 	}
 
 	public static void load() {

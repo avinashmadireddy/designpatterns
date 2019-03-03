@@ -1,6 +1,6 @@
 package com.dp.creational_patterns.prototype;
 
-public class Shape {
+public abstract class Shape implements Cloneable {
 	private String id;
 	protected String type;
 
@@ -18,6 +18,11 @@ public class Shape {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 
 }

@@ -2,7 +2,7 @@ package com.dp.creational_patterns.prototype;
 
 public class PrototypePattern {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		ConstructCache.load();
 
 		Circle circle = (Circle) ConstructCache.getShare("1");
