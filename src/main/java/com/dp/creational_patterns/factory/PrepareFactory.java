@@ -1,8 +1,5 @@
 package com.dp.creational_patterns.factory;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class PrepareFactory {
 	public static String MONGO = "MONGO";
 	public static String SQL = "SQL";
