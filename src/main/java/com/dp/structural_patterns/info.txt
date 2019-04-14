@@ -1,3 +1,39 @@
 Structural Patterns
 These design patterns concern class and object composition. Concept of inheritance is 
 used to compose interfaces and define ways to compose objects to obtain new functionalities.
+
+
+Adapter
+  . similar plug adapter..but in software coding can have multiple adapters
+  . convert interface in to another interface
+  . works with legacy code
+  . translates requests
+  . Client, Adapter, Adaptee
+  . Ex : Arrays -> Lists, Stream classes
+  . Client centric
+  . Integrate new with old
+  . Interface, but not required
+  . Adaptee can be the implementaion
+  . designed different classes to work together
+  . works after code is designed
+  
+Bridge
+ . similar to adapter pattern, the only difference is Bridge pattern works with 
+   new code, where as adapter pattern works with legacy code
+ . Decouple Abstraction and implementaion
+ . uses techniques : Encapsulation, Composition, and inheritance
+ . Changes in abstraction won't affect client
+ . Details won't be right
+ . Ex : Drivers, JDBC  
+   
+   
+ . Designed upfront
+ . Abstraction and implementation vary
+ . Build in advance
+ . Both adapt multiple systems
+
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
